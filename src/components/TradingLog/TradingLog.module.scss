@@ -1,0 +1,53 @@
+@use "../../app/globals.scss" as *;
+
+.log {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid $color-line;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.05s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.date {
+  color: $color-secondary-text;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.contents {
+  display: -webkit-inline-box;
+  color: $color-secondary-text;
+  height: 100%;
+  font-size: 1.4rem;
+  background: #f4f4f4;
+  border-radius: 5px;
+  padding-bottom: 4px;
+  // 2줄 이상 말줄임표 표시 CSS
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  // 말줄임표 표시
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  p {
+    margin: 10px;
+  }
+}

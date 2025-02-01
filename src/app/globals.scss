@@ -1,0 +1,33 @@
+/* 공통 색상 */
+$color-primary: #27509c;
+$color-placeholder: #929aa6;
+$color-white: #fff;
+$color-black: #000;
+$color-danger: #fc3f3f;
+
+$color-primary-text: #313131;
+$color-secondary-text: #848e9c;
+$color-line: #eaecef;
+
+$color-positive: #d61f1f;
+$color-negative: #134ae0;
+
+/* 공통 스타일 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: var(--font-ibm-plex-sans-kr);
+}
+
+.link {
+  color: $color-primary;
+  text-decoration: none;
+
+  &.color-black {
+    color: $color-primary-text;
+  }
+}

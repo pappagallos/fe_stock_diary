@@ -1,0 +1,33 @@
+$color-info: rgb(30, 180, 245);
+$color-warning: rgb(246, 154, 24);
+$color-error: rgb(252, 63, 63);
+
+.alert {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  word-break: keep-all;
+
+  &.info {
+    background-color: rgba($color-info, 0.2);
+    color: $color-info;
+  }
+
+  &.warning {
+    background-color: rgba($color-warning, 0.2);
+    color: $color-warning;
+  }
+
+  &.error {
+    background-color: rgba($color-error, 0.2);
+    color: $color-error;
+  }
+
+  .icon {
+    font-size: 2rem;
+    margin-right: 5px;
+  }
+}

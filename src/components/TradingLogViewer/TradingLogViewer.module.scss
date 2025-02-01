@@ -1,0 +1,58 @@
+@use "../../app/globals.scss" as *;
+
+.trading_log_viewer {
+  width: 100%;
+}
+
+.trading_log_viewer_header {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.trading_log_viewer_header_date {
+  margin: 5px 0;
+  color: $color-secondary-text;
+}
+
+.trading_log_viewer_header_title {
+  margin: 8px 0 15px 0;
+}
+
+.trading_log_viewer_footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.trading_contents {
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  p {
+    margin: 0;
+  }
+}
+
+.my_tickers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+
+  img {
+    width: 40px;
+    height: auto;
+  }
+}

@@ -1,0 +1,92 @@
+@use "../../app/globals.scss" as *;
+
+$color-error: rgb(252, 63, 63);
+
+.label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $color-primary-text;
+  margin: 0 0 5px 0;
+}
+
+.text_field_container {
+  position: relative;
+}
+
+.text_field {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid $color-line;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.15s ease-in-out;
+  margin-bottom: 20px;
+
+  &:hover,
+  &.focused {
+    border: 1px solid $color-primary;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+
+  &.error {
+    border: 1px solid $color-error;
+  }
+
+  &.focused + .auto_completion_list {
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-family: var(--font-ibm-plex-sans-kr);
+    font-weight: 400;
+    color: $color-primary-text;
+
+    &::placeholder {
+      color: $color-placeholder;
+    }
+
+    &:disabled {
+      color: $color-placeholder;
+      background-color: transparent;
+    }
+  }
+}
+
+.auto_completion_list {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background: $color-white;
+  border: 1px solid $color-line;
+  border-radius: 5px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    li {
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: $color-primary-text;
+      padding: 5px 15px;
+      transition: 0.1s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background: $color-line;
+      }
+    }
+  }
+}

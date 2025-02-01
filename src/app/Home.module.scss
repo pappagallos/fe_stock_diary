@@ -1,0 +1,65 @@
+@use "../app/globals.scss" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 30px;
+  border-bottom: 1px solid $color-line;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.header_right_list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+
+  li {
+    font-size: 1.4rem;
+    margin-left: 15px;
+  }
+}
+
+.body {
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+.logs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.trading_log_add_button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  .add_icon {
+    width: 30%;
+    height: auto;
+    color: $color-white;
+  }
+}

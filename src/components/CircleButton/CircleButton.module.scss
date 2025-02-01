@@ -1,0 +1,23 @@
+@use "../../app/globals.scss" as *;
+
+.circle_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: $color-primary;
+  box-shadow: 0 8px 20px rgba($color-primary, 0.3);
+  transition: 0.025s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
